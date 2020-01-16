@@ -1,0 +1,8 @@
+node{
+    stage('SCM Checkout'){
+      git 'https://github.com/bishnu110/bishnu-test'
+    }
+    stage('Compile-Package'){
+      sh 'mvn package'
+    }
+}
