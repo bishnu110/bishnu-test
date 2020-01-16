@@ -3,6 +3,7 @@ node{
       git 'https://github.com/bishnu110/bishnu-test'
     }
     stage('Compile-Package'){
-      sh 'mvn package'
+      def mvnHome = tool name: 'Maven3', type: 'maven'
+        sh "${mvnHome}/bin/mvn package"
     }
 }
